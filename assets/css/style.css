@@ -5,80 +5,89 @@
 /* =========================================
    CSS Variables
 ========================================= */
-:root{
-   /* ========== Main colors (HSL - hue, saturation, and lightness) ========== */
+:root {
+  /* ========== Main colors (HSL - hue, saturation, and lightness) ========== */
 
-   /* Blue - hsl(217, 85%, 74%); */
-   /* Purple - hsl(245, 54%, 74%); */
-   /* Teal - hsl(181, 47%, 49%); */
-   /* Yellow - hsl(65, 60%, 70%); */
-   /* Green - hsl(162, 60%, 65%); */
-   /* Red - hsl(356, 67%, 70%); */
-   /* Pink - hsl(330, 73%, 72%); */
+  /* Blue - hsl(217, 85%, 74%); */
+  /* Purple - hsl(245, 54%, 74%); */
+  /* Teal - hsl(181, 47%, 49%); */
+  /* Yellow - hsl(65, 60%, 70%); */
+  /* Green - hsl(162, 60%, 65%); */
+  /* Red - hsl(356, 67%, 70%); */
+  /* Pink - hsl(330, 73%, 72%); */
 
-   --hue: ;
-   --sat: ;
-   --light: ;
+  --hue: 217;
+  --sat: 85%;
+  --light: 74%;
+  --primary-color: hsl(var(--hue) var(--sat) var(--light)); /* primary */
+  --white-color: hsl(var(--hue) 45% 98%); /* white */
+  --dark-color: hsl(var(--hue) 26% 12%); /* dark */
 
-   --primary-color: ; /* primary */
-   --white-color: ; /* white */
-   --dark-color: ; /* dark */
+  /* ======= Changeable colors for dark/light themes ======= */
+  --color-01: hsl(var(--hue) var(--sat) var(--light)); /* primary to dark */
+  --color-02: hsl(var(--hue) 45% 98%); /* white to dark */
+  --color-03: hsl(var(--hue) 26% 12%); /* dark to white */
+  --color-04: rgb(247, 247, 247); /* light-gray to dark-gray */
+  /* --color-04: hsl(var(--hue) 0% 62%); light-gray to dark-gray */
+ 
+  --color-05: hsl(var(--hue) 26% 12%); /* dark to primary */
 
-   /* ======= Changeable colors for dark/light themes ======= */
-   --color-01: ; /* primary to dark */
-   --color-02: ; /* white to dark */
-   --color-03: ; /* dark to white */
-   --color-04: ; /* light-graygray to dark-gray */
-   --color-05: ; /* dark to primary */
+  --body-color: hsl(250 26% 12%); /* dark to white */
+  --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
 
-   --body-color: ; /* dark to white */
-   --hover-color: ;
+  /* ======= Background colors ======= */
+  --bottom-nav-bg: hsl(var(--hue) 32% 25% / 0.65);
+  --card-bg: linear-gradient(
+    120deg,
+    hsl(var(--hue) 54% 74% / 0.15),
+    hsl(var(--hue) 54% 74% / 0.05)
+  );
+  --modal-backdrop-bg: hsl(var(--hue) 54% 74% / 0.1);
+  --footer-bg: linear-gradient(
+    360deg,
+    hsl(var(--hue) 54% 74% / 0.15),
+    hsl(var(--hue) 54% 74% / 0.1)
+  );
 
-   /* ======= Background colors ======= */
-   --bottom-nav-bg: ;
-   --card-bg: ;
-   --modal-backdrop-bg: ;
-   --footer-bg: ;
+  --scrollbar-color: hsl(var(--hue) 25% 25%);
+  --scrollbar-thumb: hsl(var(--hue) var(--sat) var(--light));
+  --scrollbar-thumb-hover: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
 
-   --scrollbar-color: ;
-   --scrollbar-thumb: ;
-   --scrollbar-thumb-hover: ;
+  /* ======= Font and typography ======= */
+  --body-font-family: "Inter", serif;
 
-   /* ======= Font and typography ======= */
-   --body-font-family: ;
-   
-   /* ======= Font sizes ======= */
-   --h1-font-size: ;
-   --h2-font-size: ;  
-   --h3-font-size: ;
-   --h4-font-size: ;
-   --h5-font-size: ;
+  /* ======= Font sizes ======= */
+  --h1-font-size: 2.85rem;
+  --h2-font-size: 2.25rem;
+  --h3-font-size: 1.97rem;
+  --h4-font-size: 1.43rem;
+  --h5-font-size: 1.13rem;
 
-   --xlarge-font-size: ;
-   --large-font-size: ;
-   --medium-font-size: ;
-   --base-font-size: ;
-   --small-font-size: ;
-   --tiny-font-size: ;
-   
-   /* ======= Font weights ======= */
-   --font-light: ;
-   --font-regular: ;
-   --font-medium: ;
-   --font-semi-bold: ;
-   --font-bold: ;
+  --xlarge-font-size: 1.48rem;
+  --large-font-size: 1.23rem;
+  --medium-font-size: 1.18rem;
+  --base-font-size: 0.9rem;
+  --small-font-size: 1.07rem;
+  --tiny-font-size: 0.98rem;
 
-   /* ======= Layering order(z-index) ======= */
-   --z-minus: ;
-   --z-base: ;
-   --z-low: ;
-   --z-high: ;
-   --z-content: ;
-   --z-tooltip: ;
-   --z-fixed: ;
-   --z-overlay: ;
-   --z-modal: ;
-   --z-max: ;
+  /* ======= Font weights ======= */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* ======= Layering order(z-index) ======= */
+  --z-minus: -1;
+  --z-base: 0;
+  --z-low: 1;
+  --z-high: 10;
+  --z-content: 100;
+  --z-tooltip: 1000;
+  --z-fixed: 1100;
+  --z-overlay: 1900;
+  --z-modal: 2000;
+  --z-max: 9999;
 }
 
 /* ======= Light theme ======= */
@@ -90,11 +99,101 @@
 /* =========================================
    Base Styles
 ========================================= */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font-family);
+  font-size: var(--base-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--white-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-01);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: var(--base-font-size);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+i{
+   font-size: 22px;
+}
 /* =========================================
    Reusable Styles
 ========================================= */
+section {
+   padding: 4.5rem 0 1rem 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.container {
+max-width: 968px;
+width: 100%;
+margin-left: 1rem;
+margin-right: 1rem;
+}
 
+.grid {
+display: grid;
+gap: 1.25rem;
+}
+
+.main {
+overflow: hidden;
+}
+
+.section_title .section_subtitle {
+text-align: center;
+}
+
+.section_title {
+font-size: var(--h2-font-size);
+color: var(--color-01);
+margin-bottom: 2rem;
+
+}
+
+.section_subtitle {
+font-size: var(--base-font-size);
+color: var(--color-04);
+}
+.description{
+   color: var(--color-04);
+}
 /* =========================================
    Components
 ========================================= */
@@ -110,7 +209,24 @@
 /* =========================================
    Header
 ========================================= */
-
+header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1.5rem 0;
+}
+header .container{
+   display: flex;
+   justify-content: space-between;
+}
+nav{
+   display: flex;
+   gap: 20px;
+}
+nav .talk_btn{
+   padding: 12px 12px ;
+   border-radius: 50px;
+}
 /* ========== Dark/Light theme buttons ========== */
 
 /* =========================================
