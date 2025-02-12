@@ -66,8 +66,8 @@
   --xlarge-font-size: 1.48rem;
   --large-font-size: 1.23rem;
   --medium-font-size: 1.18rem;
-  --base-font-size: 0.8rem;
-  --small-font-size: 1.07rem;
+  --base-font-size: 0.9rem;
+  --small-font-size: 0.8rem;
   --tiny-font-size: 0.98rem;
 
   /* ======= Font weights ======= */
@@ -141,8 +141,8 @@ button {
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: var(--base-font-size);
-  padding: 12px 18px;
+
+  padding: 13px 26px;
   border-radius: 50px;
 }
 
@@ -177,20 +177,22 @@ section {
 .main {
   overflow: hidden;
 }
-
-.section_title .section_subtitle {
-  text-align: center;
+.heading_wrapper{
+  margin-bottom: 150px;
 }
 
 .section_title {
   font-size: var(--h2-font-size);
   color: var(--color-01);
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.5px;
 }
 
 .section_subtitle {
-  font-size: var(--base-font-size);
-  color: var(--color-04);
+
+  text-align: center;
 }
 .description {
   color: var(--color-04);
@@ -206,6 +208,17 @@ section {
   border: 2px solid var(--color-01);
   color: white;
 }
+.blue_btn {
+  background-color: var(--color-01);
+  color: var(--color-03);
+}
+.heading_wrapper{
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
 /* =========================================
    Components
 ========================================= */
@@ -248,7 +261,31 @@ nav {
 /* =========================================
    Bottom navigation menu
 ========================================= */
+.bottom_nav{
+  position: fixed;
+  inset: auto 50% 40px auto;
+  transform: translate(50%);
+z-index: var(--z-fixed);
+background-color: var(--bottom-nav-bg);
+padding: 12px 26px;
+border-radius: 100px;
+display: flex;
+grid-area: 20px;
+}
 
+.bottom_nav .nav_item{
+  padding: 8px;
+  border-radius: 60%;
+  cursor: pointer;
+}
+.bottom_nav .nav_item i {
+  font-size: 18px;
+  color: var(--color-02);
+}
+.current{
+  background-color: var(--color-01);
+  color: var(--color-03);
+}
 /* =========================================
    Home
 ========================================= */
@@ -306,14 +343,14 @@ font-size: 21px;
 .texts_div{
   margin-bottom: 30px;
 }
-.intro_textt{
+.intro_text{
 color: var(--color-04);
-margin-bottom: 20px;
+margin-bottom: 15px;
 }
 .name_text{
   font-size: var(--h2-font-size);
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .role_text{
@@ -327,6 +364,14 @@ margin-bottom: 20px;
 /* Right Section */
 .home .right_sec{
   gap: 10px;
+  animation: scroll_hint 1s linear 0s infinite alternate ;
+}
+@keyframes scroll_hint {
+  from{
+    transform: translateY(0);
+  } to{
+    transform: translateY(20px);
+  }
 }
 .mouse_icon,
 .down_arw {

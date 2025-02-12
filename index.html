@@ -1,110 +1,193 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design a Responsive Modern Personal Portfolio Website - Html, Css & Javascript</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Design a Responsive Modern Personal Portfolio Website - Html, Css &
+      Javascript
+    </title>
     <!--========== Logo ==========-->
-    <link rel="shortcut icon" href="/assets/images/logo/logo.png" type="image/x-icon">
- 
-  <!--========== Font Family ==========-->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logo/logo.png"
+      type="image/x-icon"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <!--========== Swiper CSS ==========-->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-  <!--========== Main style sheet ==========-->
-  <link rel="stylesheet" href="/assets/css/style.css">
+    <!--========== Font Family ==========-->
 
-  <!--========== Remixicon ==========-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--========== ScrollReveal JS ==========-->
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--========== Swiper CSS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--========== Main style sheet ==========-->
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
+    <!--========== Remixicon ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--========== ScrollReveal JS ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <!--========== Customized cursor ==========-->
 
-</head>
-<body>
+    <!--========== To top button with scroll indicator bar ==========-->
 
-  <!--========== Customized cursor ==========-->
-
-  <!--========== To top button with scroll indicator bar ==========-->
-
-  <!--========== Header ==========-->
-  <header>
-    <div class="container">
-      <h2 class="brand">Sue</h2>
-      <nav>
-        <div class="nav_item">
-          <button class="talk_btn transparent_btn">Let's talk</button>
-        </div>
-        <div class="nav_item">
-          <i class="ri-sun-fill"></i>
-        </div>
-      </nav>
-  </div>
-  </header>
-  <!--========== Bottom navigation menu ==========-->
-
-  <!--========== Home ==========-->
-<section class="home">
-  <div class="container">
-    <div class="left_sec">
-      <p class="follow_text rotated_text">Follow On</p>
-      <div class="left_line"></div>
-      <div class="social_icons_wrap">
-        <i class="ri-facebook-fill"></i>
-        <i class="ri-twitter-x-line"></i>
-        <i class="ri-linkedin-fill"></i>
+    <!--========== Header ==========-->
+    <header>
+      <div class="container">
+        <h2 class="brand">Sue</h2>
+        <nav>
+          <div class="nav_item">
+            <button class="talk_btn transparent_btn">Let's talk</button>
+          </div>
+          <div class="nav_item">
+            <i class="ri-sun-fill"></i>
+          </div>
+        </nav>
       </div>
-    </div>
-    <div class="middle_sec">
-      <figure class="hero_banner_wrap">
-        <img src="/assets/images/avatar images/avatar-img-blue.png" alt="" class="hero_banner">
-      </figure>
-      <hero class="description">
-        <div class="texts_div">
-          <p class="intro_text">Hello, I'm</p>
-          <p class="name_text">Affan</p>
-          <p class="role_text">A Web Designer & Developer</p>
-
+    </header>
+    <!--========== Bottom navigation menu ==========-->
+    <nav class="bottom_nav">
+      <div class="nav_item">
+        <i class="ri-home-4-line"></i>
+      </div>
+      <div class="nav_item current">
+        <i class="ri-user-line"></i>
+      </div>
+      <div class="nav_item">
+        <i class="ri-book-3-line"></i>
+      </div>
+      <div class="nav_item">
+        <i class="ri-service-line"></i>
+      </div>
+      <div class="nav_item">
+        <i class="ri-briefcase-line"></i>
+      </div>
+      <div class="nav_item">
+        <i class="ri-chat-1-line"></i>
+      </div>
+    </nav>
+    <!--========== Home ==========-->
+    <section class="home">
+      <div class="container">
+        <div class="left_sec">
+          <p class="follow_text rotated_text">Follow On</p>
+          <div class="left_line"></div>
+          <div class="social_icons_wrap">
+            <i class="ri-facebook-fill"></i>
+            <i class="ri-twitter-x-line"></i>
+            <i class="ri-linkedin-fill"></i>
+          </div>
         </div>
-        <button class="hire_btn">
-          Hire me 
-          <i class="ri-user-follow-line"></i>
-        </button>
-      </hero>
-    </div>
-    <div class="right_sec">
-      <i class="ri-mouse-line mouse_icon"></i>
-      <div class="mouse_text rotated_text">Scroll Down</div>
-      <i class="ri-arrow-down-s-line down_arw"></i>
-    </div>
+        <div class="middle_sec">
+          <figure class="hero_banner_wrap">
+            <img
+              src="/assets/images/avatar images/avatar-img-blue.png"
+              alt=""
+              class="hero_banner"
+            />
+          </figure>
+          <div class="description">
+            <div class="texts_div">
+              <p class="intro_text">Hello, I'm</p>
+              <p class="name_text">Sk Affan</p>
+              <p class="role_text">A Web Designer & Developer</p>
+            </div>
+            <button class="hire_btn blue_btn">
+              Hire me
+              <i class="ri-user-follow-line"></i>
+            </button>
+          </div>
+        </div>
+        <div class="right_sec">
+          <i class="ri-mouse-line mouse_icon"></i>
+          <div class="mouse_text rotated_text">Scroll Down</div>
+          <i class="ri-arrow-down-s-line down_arw"></i>
+        </div>
+      </div>
+    </section>
+    <!--========== About Me ==========-->
+    <section class="about">
+      <div class="container">
+        <div class="heading_wrapper">
+          <p class="section_title">About Me</p>
+          <p class="section_subtitle">What I do</p>
+        </div>
+        <div class="about_content">
+          <figure class="about_banner_wrapper">
+            <img
+              src="/assets/images/avatar images/about-img.jpg"
+              alt=""
+              class="about_banner"
+            />
+          </figure>
+          <div class="about_details">
+            <p class="about_role_txt">I'm a Web Designer & Developer</p>
+            <p class="about_description">
+              I'm a New York, USA-based product designer with a focus on web
+              design, UX/UI design, illustration, a visual development. I have a
+              diverse range of experience having worked across various fields
+              and industries.
+              <br /><br />
+              With 07 years experience as a professional web designer, I have
+              acquired the skills and knowledge necessary to make your project a
+              success!
+            </p>
+            <div class="about_stats_wrap">
+              <div class="about_stat_box">
+                <div class="about_stat_number">07</div>
+                <div class="about_stat_label">Years Of Experience</div>
+              </div>
+              <div class="about_stats_box">
+                <div class="about_stat_number">1.2K</div>
+                <div class="about_stat_label">Complete Projects</div>
+              </div>
+              <div class="about_stats_box">
+                <div class="about_stat_number">1k</div>
+                <div class="about_stat_label">Satisfied Customers </div>
+              </div>
+          
+            </div>
+                <div class="about_btns">
+                <button class="about_hire_btn | blue_btn">
+                  Hire me
+                  <i class="ri-user-follow-line"></i>
+                </button>
+              <button class="about_download_btn | transparent_btn">Download CV</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--========== My Resume ==========-->
 
-  </div>
-</section>
-  <!--========== About Me ==========-->
+    <!--========== Services ==========-->
 
-  <!--========== My Resume ==========-->
+    <!--========== Portfolio ==========-->
 
-  <!--========== Services ==========-->
+    <!--========== Contact Me ==========-->
 
-  <!--========== Portfolio ==========-->
+    <!--========== Footer ==========-->
 
-  <!--========== Contact Me ==========-->
+    <!--========== Swiper JS ==========-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--========== EmailJS ==========-->
 
-  <!--========== Footer ==========-->
-
-
-
-  <!--========== Swiper JS ==========-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!--========== EmailJS ==========-->
-
-  <!--========== Main javascript ==========-->
-  <script src="/assets/js/main.js"></script>
-</body>
+    <!--========== Main javascript ==========-->
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>
