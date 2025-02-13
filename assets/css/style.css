@@ -146,10 +146,7 @@ button {
   border-radius: 50px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 i{
   cursor: pointer;
 }
@@ -157,7 +154,7 @@ i{
    Reusable Styles
 ========================================= */
 section {
-  padding: 4.5rem 0 1rem 0;
+  padding: 4.5rem 0 8rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +175,7 @@ section {
   overflow: hidden;
 }
 .heading_wrapper{
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .section_title {
@@ -212,11 +209,8 @@ section {
   background-color: var(--color-01);
   color: var(--color-03);
 }
-.heading_wrapper{
-  /* width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; */
+.invisible{
+  display: none;
 }
 
 /* =========================================
@@ -379,14 +373,61 @@ margin-bottom: 15px;
   color: var(--color-04);
 }
 .mouse_text{
-
   margin-top: 60px;
 }
 
 /* =========================================
    About Me
 ========================================= */
+.about_content{
+  display: flex;
+  align-items: center;
+}
+.about_banner{
+  width: 300px;
+  border-radius: 20px;
+}
+.about_content{
+  display: flex;
+  gap: 70px;
+}
+.about_role_txt{
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 30px;
+  font-size: var(--large-font-size);
+}
+.about_description{
+  color: var(--color-04);
+  margin-bottom: 30px;
+}
+.about_stats_wrap{
+  width: 100%;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  margin-bottom: 20px;
+}
+.about_stats_box{
+background: var(--card-bg);
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 15px;
+padding: 30px;
+border-radius: 6px;
 
+}
+.about_stat_number{
+  font-size: var(--h2-font-size);
+  color: var(--color-01);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.5px;
+}
+
+.about_btns{
+  display: flex;
+  gap: 20px;
+}
 /* =========================================
    My Resume
 ========================================= */
