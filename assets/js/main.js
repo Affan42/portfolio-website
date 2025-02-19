@@ -1,4 +1,11 @@
 /* =====================================================
+   ELEMENTS
+===================================================== */
+const elements=  {
+   modals: document.querySelectorAll(".modal"),
+   overlay: document.querySelectorAll(".overlay"),
+}
+/* =====================================================
    Resume section tabs and tab contents
 ===================================================== */
 

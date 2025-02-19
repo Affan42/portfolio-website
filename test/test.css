@@ -1,16 +1,23 @@
 body{
-    display: flex;
-    justify-content: center;
+    /* position: relative; */
+    /* height: 100vw; */
+    /* display: flex;
+    justify-content: center; */
+}
+.overlay{
+    position: fixed;
+    inset: 0;
+    overflow-y: scroll;
+    overflow-x: clip;
 }
 .container{
     max-width: 998px;
-    display: flex;
+    height: 900px;
     background-color: red;
-}
-figure{
-    width: 350px;
-}
-img{
-    width: 100%;
-    max-width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: scroll;
+
 }

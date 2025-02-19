@@ -47,6 +47,8 @@
     <!--========== To top button with scroll indicator bar ==========-->
 
     <!--========== Header ==========-->
+    
+
     <header>
       <div class="container">
         <h2 class="brand">Sue</h2>
@@ -60,6 +62,7 @@
         </nav>
       </div>
     </header>
+
     <!--========== Bottom navigation menu ==========-->
     <nav class="bottom_nav">
       <div class="nav_item">
@@ -81,6 +84,7 @@
         <i class="ri-chat-1-line"></i>
       </div>
     </nav>
+    <nav class="bottom_nav_minified"></nav>
     <!--========== Home ==========-->
     <section class="home">
       <div class="container">
@@ -97,7 +101,7 @@
           <figure class="hero_banner_wrap">
             <img
               src="/assets/images/avatar images/avatar-img-blue.png"
-              alt=""
+              alt="hero image banner"
               class="hero_banner"
             />
           </figure>
@@ -131,7 +135,7 @@
           <figure class="about_banner_wrapper">
             <img
               src="/assets/images/avatar images/about-img.jpg"
-              alt=""
+              alt="about image banner"
               class="about_banner"
             />
           </figure>
@@ -158,27 +162,177 @@
               </div>
               <div class="about_stats_box">
                 <div class="about_stat_number">1k</div>
-                <div class="about_stat_label">Satisfied Customers </div>
+                <div class="about_stat_label">Satisfied Customers</div>
               </div>
-          
             </div>
-                <div class="about_btns">
-                <button class="about_hire_btn | blue_btn">
-                  Hire me
-                  <i class="ri-user-follow-line"></i>
-                </button>
-              <button class="about_download_btn | transparent_btn">Download CV</button>
-              </div>
+            <div class="about_btns">
+              <button class="about_hire_btn | blue_btn">
+                Hire me
+                <i class="ri-user-follow-line"></i>
+              </button>
+              <button class="about_download_btn | transparent_btn">
+                Download CV
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!--========== My Resume ==========-->
+    <!--========== Skills ==========-->
+    <section class="skills">
+      <div class="container">
+        <div class="heading_wrapper">
+          <p class="section_title">Skills</p>
+          <p class="section_subtitle">What I'm good at</p>
+        </div>
+        <div class="skills_content">
+          <div class="skills_box card">
+            <div class="skills_heading">
+              <i class="ri-macbook-fill skills_heading_icon"></i>
 
+              <p class="skills_title">Front-End Developer</p>
+            </div>
+            <div class="skills_list">
+              <div class="skills_item">
+                <i class="skills_item_icon ri-checkbox-circle-fill"></i>
+                <div class="skills_item_texts_wrap">
+                  <p class="skills_item_name">HTML</p>
+                  <p class="skills_item_level">Advanced</p>
+                </div>
+              </div>
+              <div class="skills_item">
+                <i class="skills_item_icon ri-checkbox-circle-fill"></i>
+                <div class="skills_item_texts_wrap">
+                  <p class="skills_item_name">CSS</p>
+                  <p class="skills_item_level">Advanced</p>
+                </div>
+              </div>
+              <div class="skills_item">
+                <i class="skills_item_icon ri-checkbox-circle-fill"></i>
+                <div class="skills_item_texts_wrap">
+                  <p class="skills_item_name">JavaScript</p>
+                  <p class="skills_item_level">Intermediate</p>
+                </div>
+              </div>
+              <div class="skills_item">
+                <i class="skills_item_icon ri-checkbox-circle-fill"></i>
+                <div class="skills_item_texts_wrap">
+                  <p class="skills_item_name">Bootstrap</p>
+                  <p class="skills_item_level">Basic</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--========== Services ==========-->
+    <section class="services">
+      <div class="container">
+        <div class="heading_wrapper">
+          <p class="section_title">Service</p>
+          <p class="section_subtitle">What I Provide</p>
+        </div>
+        <div class="services_content">
+          <div class="services_box card">
+            <i class="services_box_icon ri-pencil-ruler-2-fill"></i>
+            <p class="services_box_name">Web Design</p>
+            <p class="services_box_see_more_text">
+              See Mode
+              <i class="see_more_text_icon ri-arrow-right-up-fill"></i>
+            </p>
+          
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Modal & Overlay -->
+    <div class=" invisible services_modal_overlay modal_overlay"></div>
+
+    <div class="services_modal invisible modal">
+      <i class="modal_cross_icon ri-close-line"></i>
+      <p class="services_modal_title">Web Design</p>
+      <p class="services_modal_description">
+        With 07 years experience as a professional web designer, I have
+        acquired the skills and knowledge necessary to make your project
+        a success!
+      </p>
+      <div class="services_modal_list_label">What I Provide</div>
+      <ul class="modal_list">
+        <li class="modal_list_item">
+          <i class="modal_list_icon ri-checkbox-circle-fill"></i>
+          <p class="modal_list_text">
+            Design & build a custom websites.
+          </p>
+        </li>
+        <li class="modal_list_item">
+          <i class="modal_list_icon ri-checkbox-circle-fill"></i>
+          <p class="modal_list_text">Responsive Website Design.</p>
+        </li>
+        <li class="modal_list_item">
+          <i class="modal_list_icon ri-checkbox-circle-fill"></i>
+          <p class="modal_list_text">
+            Search Engine Optimization (SEO).
+          </p>
+        </li>
+        <li class="modal_list_item">
+          <i class="modal_list_icon ri-checkbox-circle-fill"></i>
+          <p class="modal_list_text">Website Hosting.</p>
+        </li>
+        <li class="modal_list_item">
+          <i class="modal_list_icon ri-checkbox-circle-fill"></i>
+          <p class="modal_list_text">
+            Website Maintenance and Support.
+          </p>
+        </li>
+      </ul>
+    </div>
     <!--========== Portfolio ==========-->
-
+    <section class="portfolio">
+      <div class="container">
+        <div class="heading_wrapper">
+          <p class="section_title">Portfolio</p>
+          <p class="section_subtitle">My Creative Work</p>
+        </div>
+        <div class="portfolio_projects_grid">
+          <div class="portfolio_project card">
+            <img
+              src="/assets/images/portfolio images/portfolio-img-01.jpg"
+              alt="project preview"
+              class="project_img"
+            />
+            <div class="project_texts_wrap">
+              <p class="project_category_txt">WEB DESIGN</p>
+              <p class="project_title_txt">Dynamic</p>
+            </div>
+          </div>
+          <div class="portfolio_project card">
+            <img
+              src="/assets/images/portfolio images/portfolio-img-01.jpg"
+              alt="project preview"
+              class="project_img"
+            />
+            <div class="project_texts_wrap">
+              <p class="project_category_txt">WEB DESIGN</p>
+              <p class="project_title_txt">Dynamic</p>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Overlay & Modals -->
+<div class="modal_overlay project_modal_overlay"></div>
+<div class="portfolio_project_modal modal ">
+  <i class="services_box_icon ri-pencil-ruler-2-fill"></i>
+<img src="/assets/images/portfolio images/portfolio-img-01.jpg" alt="" class="portfolio_project_modal_img">
+<p class="portfolio_project_modal_title">Lorem ipsum dolor sit amet consectetur.</p>
+<div class="portfolio_project_modal_description">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa praesentium labore eum? Provident sapiente, temporibus libero ut rem nihil illum suscipit, placeat voluptatem sed amet vitae. Dolorum debitis facere numquam quaerat sapiente recusandae, quae iure pariatur libero nostrum cumque quas ut veniam architecto fuga eaque labore asperiores et nam molestias incidunt ducimus. Iusto maxime quos nobis ratione, perspiciatis repellat eligendi explicabo aspernatur consectetur, ex, tempore reprehenderit velit hic fugiat atque vel. Deserunt consequatur architecto fugiat ipsum dolor nam! Ex voluptate blanditiis excepturi maxime doloremque quibusdam illo dicta provident eveniet fuga, tempora mollitia aliquid consequatur quae. Odit quaerat, saepe nemo nesciunt, consectetur eaque blanditiis ad quod at magni itaque repudiandae alias aliquam nobis. Eum, quae voluptatibus? Similique error officiis, provident veritatis odit excepturi blanditiis nam consectetur, ipsa temporibus quo, est unde laborum. Adipisci non eligendi repudiandae sed incidunt itaque quam deleniti modi, sint dolores alias quaerat consequatur illo, delectus similique! Sit eaque quas excepturi facilis dolores impedit et vel iure repellendus provident natus aperiam nemo commodi non, sequi accusamus expedita, eius fuga inventore deserunt. Culpa maxime dignissimos adipisci facilis odio debitis qui! Velit dolorum fuga dolorem laudantium voluptas? Voluptate in fugit dolorum voluptatibus nam minus, exercitationem fuga provident rerum explicabo tempora.
+</div>
+</div>
+    
     <!--========== Contact Me ==========-->
 
     <!--========== Footer ==========-->

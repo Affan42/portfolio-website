@@ -60,12 +60,12 @@
   --h1-font-size: 2.85rem;
   --h2-font-size: 2.25rem;
   --h3-font-size: 1.97rem;
-  --h4-font-size: 1.43rem;
+  --h4-font-size: 1.5rem;
   --h5-font-size: 1.13rem;
 
   --xlarge-font-size: 1.48rem;
   --large-font-size: 1.23rem;
-  --medium-font-size: 1.18rem;
+  --medium-font-size: 1.05rem;
   --base-font-size: 0.9rem;
   --small-font-size: 0.8rem;
   --tiny-font-size: 0.98rem;
@@ -146,8 +146,7 @@ button {
   border-radius: 50px;
 }
 
-
-i{
+i {
   cursor: pointer;
 }
 /* =========================================
@@ -174,7 +173,7 @@ section {
 .main {
   overflow: hidden;
 }
-.heading_wrapper{
+.heading_wrapper {
   margin-bottom: 100px;
 }
 
@@ -188,7 +187,6 @@ section {
 }
 
 .section_subtitle {
-
   text-align: center;
 }
 .description {
@@ -209,16 +207,68 @@ section {
   background-color: var(--color-01);
   color: var(--color-03);
 }
-.invisible{
-  display: none;
+.invisible {
+  display: none !important;
 }
-
+.card {
+  border-radius: 12px;
+  background: var(--card-bg);
+  cursor: pointer;
+}
+.modal {
+  background-color: var(--color-03);
+  border-radius: 15px;
+  position: fixed;
+  z-index: var(--z-modal);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.modal_cross_icon {
+  cursor: pointer;
+  position: absolute;
+  inset: 15px 15px 0 0;
+  font-size: 18px;
+  color: var(--color-04);
+}
+.modal_cross_icon {
+  font-size: 18px;
+  color: var(--color-04);
+  cursor: pointer;
+  position: absolute;
+  inset: 15px 15px auto auto;
+}
+.modal_cross_icon:hover {
+  transform: scale(1.1);
+}
+.modal_overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-backdrop-bg);
+  z-index: var(--z-overlay);
+  /* backdrop-filter: blur(8px); */
+}
 /* =========================================
    Components
 ========================================= */
 
 /* ========== Page scroll bar ========== */
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-color);
+  border-radius: 100vw;
+  margin: 0.2rem;
+}
 
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
 /* ========== Customized cursor ========== */
 
 /* ========== To top button with scroll indicator bar ========== */
@@ -228,6 +278,7 @@ section {
 /* =========================================
    Header
 ========================================= */
+
 header {
   display: flex;
   justify-content: center;
@@ -255,19 +306,19 @@ nav {
 /* =========================================
    Bottom navigation menu
 ========================================= */
-.bottom_nav{
+.bottom_nav {
   position: fixed;
   inset: auto 50% 40px auto;
   transform: translate(50%);
-z-index: var(--z-fixed);
-background-color: var(--bottom-nav-bg);
-padding: 12px 26px;
-border-radius: 100px;
-display: flex;
-grid-area: 20px;
+  z-index: var(--z-fixed);
+  background-color: var(--bottom-nav-bg);
+  padding: 12px 26px;
+  border-radius: 100px;
+  display: flex;
+  grid-area: 20px;
 }
 
-.bottom_nav .nav_item{
+.bottom_nav .nav_item {
   padding: 8px;
   border-radius: 60%;
   cursor: pointer;
@@ -276,78 +327,77 @@ grid-area: 20px;
   font-size: 18px;
   color: var(--color-02);
 }
-.current{
+.current {
   background-color: var(--color-01);
   color: var(--color-03);
 }
 /* =========================================
    Home
 ========================================= */
-.home .container{
+.home .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.rotated_text{
-  transform:rotate(270deg);
+.rotated_text {
+  transform: rotate(270deg);
   width: 15px;
   white-space: nowrap;
-  color:var(--color-04) ;
+  color: var(--color-04);
 }
 .home .left_sec,
-.home .right_sec{
+.home .right_sec {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 /* Left Section */
 
-.home .left_sec{
+.home .left_sec {
   gap: 20px;
 }
 
-.left_line{
-width: 1px;
-height: 80px;
-border-radius: 15px;
-background-color: var(--color-04);
-background-color: var(--color-01);
+.left_line {
+  width: 1px;
+  height: 80px;
+  border-radius: 15px;
+  background-color: var(--color-04);
+  background-color: var(--color-01);
 }
-.social_icons_wrap{
+.social_icons_wrap {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .social_icons_wrap i {
-color: var(--color-01);
-font-size: 21px;
+  color: var(--color-01);
+  font-size: 21px;
 }
 
 /* Middle Section */
-.middle_sec{
+.middle_sec {
   display: flex;
   align-items: center;
   gap: 50px;
-
 }
-.hero_banner{
+.hero_banner {
   width: 400px;
 }
-.texts_div{
+.texts_div {
   margin-bottom: 30px;
 }
-.intro_text{
-color: var(--color-04);
-margin-bottom: 15px;
+.intro_text {
+  color: var(--color-04);
+  margin-bottom: 15px;
 }
-.name_text{
+.name_text {
   font-size: var(--h2-font-size);
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.role_text{
+.role_text {
   color: var(--color-04);
 }
 .hire_btn i {
@@ -356,14 +406,15 @@ margin-bottom: 15px;
 }
 
 /* Right Section */
-.home .right_sec{
+.home .right_sec {
   gap: 10px;
-  animation: scroll_hint 1s linear 0s infinite alternate ;
+  animation: scroll_hint 1s linear 0s infinite alternate;
 }
 @keyframes scroll_hint {
-  from{
+  from {
     transform: translateY(0);
-  } to{
+  }
+  to {
     transform: translateY(20px);
   }
 }
@@ -372,74 +423,239 @@ margin-bottom: 15px;
   font-size: 26px;
   color: var(--color-04);
 }
-.mouse_text{
+.mouse_text {
   margin-top: 60px;
 }
 
 /* =========================================
    About Me
 ========================================= */
-.about_content{
+.about_content {
   display: flex;
   align-items: center;
 }
-.about_banner{
+.about_banner {
   width: 300px;
   border-radius: 20px;
 }
-.about_content{
+.about_content {
   display: flex;
   gap: 70px;
 }
-.about_role_txt{
+.about_role_txt {
   font-weight: var(--font-semi-bold);
   margin-bottom: 30px;
   font-size: var(--large-font-size);
 }
-.about_description{
+.about_description {
   color: var(--color-04);
   margin-bottom: 30px;
 }
-.about_stats_wrap{
+.about_stats_wrap {
   width: 100%;
   display: grid;
   gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 20px;
 }
-.about_stats_box{
-background: var(--card-bg);
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 15px;
-padding: 30px;
-border-radius: 6px;
-
+.about_stats_box {
+  background: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  border-radius: 6px;
 }
-.about_stat_number{
+.about_stat_number {
   font-size: var(--h2-font-size);
   color: var(--color-01);
   font-weight: var(--font-semi-bold);
   letter-spacing: 0.5px;
 }
 
-.about_btns{
+.about_btns {
   display: flex;
   gap: 20px;
 }
 /* =========================================
-   My Resume
+   Skills
 ========================================= */
-
+.skills i {
+  color: var(--color-01);
+}
+.skills_content {
+  display: flex;
+  justify-content: center;
+}
+.skills_box {
+  padding: 50px 70px;
+  border-bottom: 5px solid var(--color-01);
+}
+.skills_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+.skills_title {
+  font-size: var(--large-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.skills_item_name {
+  margin-bottom: 8px;
+  font-size: var(--medium-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.skills_item_level {
+  color: var(--color-04);
+}
+.skills_heading_icon {
+  font-size: 30px;
+}
+.skills_list {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 50px;
+  row-gap: 30px;
+}
+.skills_item {
+  display: flex;
+  gap: 15px;
+}
+.skills_item_icon {
+  font-size: 22px;
+}
 /* =========================================
    Services
 ========================================= */
+.services_content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.services_box {
+  padding: 50px;
+  border-bottom: 5px solid var(--color-01);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+}
+.services_box_icon {
+  font-size: 50px;
+  color: var(--color-01);
+}
+.services_box_name {
+  font-size: var(--large-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.services_box_see_more_text {
+  color: var(--color-04);
+}
+.see_more_text_icon {
+  margin-left: 10px;
+}
+.services_modal {
+  padding: 80px 60px;
+  border-bottom: 2px solid var(--color-01);
+  width: 650px;
+}
+.services_modal_description {
+  color: var(--color-04);
+  margin-bottom: 30px;
+}
+
+.services_modal_list_label {
+  margin-bottom: 20px;
+  font-weight: var(--font-semi-bold);
+  font-size: medium;
+}
+.modal_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.modal_list_item {
+  display: flex;
+  gap: 10px;
+}
+.services_modal_title {
+  font-size: var(--h4-font-size);
+  color: var(--color-01);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.5px;
+}
+.services_modal_description {
+  color: var(--color-04);
+  text-align: center;
+}
+.modal_list_item {
+  display: flex;
+  align-items: center;
+}
+.modal_list_icon {
+  font-size: 18px;
+  color: var(--color-01);
+}
 
 /* =========================================
    Portfolio
 ========================================= */
-
+.portfolio_projects_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.portfolio_project {
+  overflow: hidden;
+  position: relative;
+}
+.project_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.project_category_txt {
+  margin-bottom: 5px;
+  color: var(--color-04);
+}
+.project_title_txt {
+  font-weight: var(--font-semi-bold);
+}
+.project_texts_wrap {
+  padding: 10px 25px 20px 25px;
+}
+.portfolio_project_modal {
+  position: absolute;
+  transform: translateY(0) translateX(-50%);
+  top: 20%;
+  padding: 30px;
+  width: 800px;
+  height: 700px;
+  overflow: scroll !important;
+}
+.portfolio_project_modal_img {
+  border-radius: 12px;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 15px;
+}
+.portfolio_project_modal_title {
+  margin-bottom: 15px;
+  font-size: var(--large-font-size);
+}
+.portfolio_project_modal_description {
+  color: var(--color-04);
+}
+.project_modal_overlay {
+  overflow-x: clip;
+  overflow-y: scroll;
+}
 /* =========================================
    Testimonials
 ========================================= */
