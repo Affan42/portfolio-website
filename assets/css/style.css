@@ -663,7 +663,21 @@ nav {
 /* =========================================
    Contact Me
 ========================================= */
-
+.modalCont{
+  position: relative;
+  border: 2px solid red;
+  height: 100vh;
+}
+.secModal{
+  background-color: green;
+  width: 700px;
+  height: 1000px;
+  overflow: scroll;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* =========================================
    Footer
 ========================================= */
