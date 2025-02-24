@@ -659,25 +659,25 @@ nav {
 /* =========================================
    Testimonials
 ========================================= */
-
+.testimonials_swiper{
+  width: 700px;
+  height: 600px;
+  background-color: red;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet{
+  background-color: var(--color-04);
+}
+.swiper-pagination-bullet-active{
+  background-color: var(--color-01);
+}
 /* =========================================
    Contact Me
 ========================================= */
-.modalCont{
-  position: relative;
-  border: 2px solid red;
-  height: 100vh;
-}
-.secModal{
-  background-color: green;
-  width: 700px;
-  height: 1000px;
-  overflow: scroll;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 /* =========================================
    Footer
 ========================================= */
@@ -685,7 +685,6 @@ nav {
 /* =========================================
    Media Queries (max-width: 1600px)
 ========================================= */
-
 /* =========================================
    Media Queries (max-width: 1200px)
 ========================================= */

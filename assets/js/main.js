@@ -24,7 +24,17 @@ const elements=  {
 /* =====================================================
    Testimonial Swiper
 ===================================================== */
-
+const swiper = new Swiper(".testimonials_swiper", {
+   loop: true,
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+   },
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+   }
+})
 /* =====================================================
    Send/Receive emails from contact form - EmailJS
 ===================================================== */
