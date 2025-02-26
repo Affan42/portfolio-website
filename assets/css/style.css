@@ -659,21 +659,48 @@ nav {
 /* =========================================
    Testimonials
 ========================================= */
-.testimonials_swiper{
-  width: 700px;
-  height: 600px;
+
+
+/* .testimonials_swiper{
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
   background-color: red;
-  font-size: 100px;
+} */
+/* .swiper-wrapper{
+  background-color: yellow;
+} */
+
+/* .swiper-slide{
+  
   display: flex;
-  justify-content: center;
   align-items: center;
-}
+  gap: 25px;
+  background-color: green;
+} */
 .swiper-pagination-bullet{
   background-color: var(--color-04);
+  opacity: 1;
+
 }
 .swiper-pagination-bullet-active{
   background-color: var(--color-01);
 }
+/* .testimonial_img{
+  width: 170px;
+  aspect-ratio: 1;
+  border-radius: 15px;
+} */
+/* .testimonials_client_name{
+  font-size: var(--large-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 5px;
+}
+.testimonials_job_text{
+  color: var(--color-04);
+  margin-bottom: 15px;
+} */
+
 /* =========================================
    Contact Me
 ========================================= */
