@@ -33,7 +33,8 @@ const swiper = new Swiper(".testimonials_swiper", {
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-   }
+   },
+   slidesPerView: 1
 })
 /* =====================================================
    Send/Receive emails from contact form - EmailJS
