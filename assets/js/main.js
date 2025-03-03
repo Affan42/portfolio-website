@@ -1,3 +1,4 @@
+import portfolioProjects from "../data/portfolio_data.js"
 /* =====================================================
    ELEMENTS
 ===================================================== */
@@ -16,7 +17,25 @@ const elements=  {
 /* =====================================================
    Portfolio modals, tabs and cards
 ===================================================== */
+// Generate portfolio cards
+const portfolioHTML = portfolioProjects.map(project => 
+   ` 
+   <div class="portfolio_project card">
+            <img
+              src="${project.img}"
+              alt="project preview"
+              class="project_img"
+            />
+            <div class="project_texts_wrap">
+              <p class="project_category_txt">${project.category}</p>
+              <p class="project_title_txt">${project.type}</p>
+            </div>
+          </div>
+          `
+).join("")
+document.querySelector(".portfolio_projects_grid").innerHTML = portfolioHTML
 
+// Generate portfolio modal as per the project
 // Filter portfolio cards according to portfolio tabs.
 
 // Open/Close Portfolio modals.
