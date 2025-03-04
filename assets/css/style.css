@@ -237,9 +237,13 @@ section {
   cursor: pointer;
   position: absolute;
   inset: 15px 15px auto auto;
+  transition: transform 0.2s;
 }
 .modal_cross_icon:hover {
   transform: scale(1.1);
+}
+.portfolio_modal_cross_icon{
+  inset: 5px 10px auto auto;
 }
 .modal_overlay {
   position: fixed;
@@ -605,6 +609,12 @@ nav {
 /* =========================================
    Portfolio
 ========================================= */
+.portfolio{
+  position: relative;
+}
+.modal_cont{
+  position: absolute;
+}
 .portfolio_projects_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

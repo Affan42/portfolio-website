@@ -39,7 +39,6 @@ document.querySelector(".portfolio_projects_grid").innerHTML = portfolioHTML
 // Filter portfolio cards according to portfolio tabs.
 
 // Open/Close Portfolio modals.
-
 /* =====================================================
    Testimonial Swiper
 ===================================================== */
@@ -58,6 +57,11 @@ const swiper = new Swiper(".testimonials_swiper", {
 /* =====================================================
    Send/Receive emails from contact form - EmailJS
 ===================================================== */
+document.querySelector("form").addEventListener("sumit", (evt)=>{
+//   console.log("hi")
+//    evt.preventDefault()
+})
+  console.log("hi")
 
 /* =====================================================
    Shrink the height of the header on scroll
