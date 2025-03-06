@@ -5,15 +5,22 @@ import portfolioProjects from "../data/portfolio_data.js"
 const elements=  {
    modals: document.querySelectorAll(".modal"),
    overlay: document.querySelectorAll(".overlay"),
+   serviceModal: {
+      triggerCards: document.querySelectorAll(".skills_box"),
+      modal: document.querySelector(".services_modal"),
+      overlay: document.querySelector(".services_modal_overlay"),
+      closeIcon:  document.querySelector(".services_modal_cross_icon"),
+   },
+   portfolioModal: {
+      modal: document.querySelector(".portfolio_project_modal"),
+      overlay: document.querySelector(".project_modal_overlay"),
+      closeIcon:  document.querySelector(".portfolio_modal_cross_icon"),
+   }
+   
 }
 /* =====================================================
    Resume section tabs and tab contents
 ===================================================== */
-
-/* =====================================================
-   Service modal open/close function
-===================================================== */
-
 /* =====================================================
    Portfolio modals, tabs and cards
 ===================================================== */
@@ -34,11 +41,43 @@ const portfolioHTML = portfolioProjects.map(project =>
           `
 ).join("")
 document.querySelector(".portfolio_projects_grid").innerHTML = portfolioHTML
+elements.portfolioModal.triggerCards = document.querySelectorAll(".portfolio_project")
+console.log(elements.portfolioModal.triggerCards);
 
 // Generate portfolio modal as per the project
 // Filter portfolio cards according to portfolio tabs.
+/* =====================================================
+   Modals open/close function
+===================================================== */
 
-// Open/Close Portfolio modals.
+function addEvent(element, event, callback){
+element.addEventListener(event, callback)
+}
+
+function toggleModal (modal, overlay, modalCloseIcon, triggerCards) {
+   let triggers = [overlay, modalCloseIcon, ...triggerCards ]
+   triggers.forEach((trigger) => {
+     addEvent(trigger, 'click', () => {
+       document.body.classList.toggle("oveflow_hidden")
+       modal.classList.toggle('invisible')
+       overlay.classList.toggle('invisible')
+     })
+   })
+
+}
+toggleModal(
+   elements.serviceModal.modal,
+   elements.serviceModal.overlay,
+   elements.serviceModal.closeIcon,
+   Array.from(elements.serviceModal.triggerCards),
+ )
+ toggleModal(
+   elements.portfolioModal.modal,
+   elements.portfolioModal.overlay,
+   elements.portfolioModal.closeIcon,
+   Array.from(elements.portfolioModal.triggerCards),
+ )
+
 /* =====================================================
    Testimonial Swiper
 ===================================================== */

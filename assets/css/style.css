@@ -152,6 +152,7 @@ i {
 /* =========================================
    Reusable Styles
 ========================================= */
+
 section {
   padding: 4.5rem 0 8rem 0;
   display: flex;
@@ -252,6 +253,9 @@ section {
   z-index: var(--z-overlay);
   /* backdrop-filter: blur(8px); */
 }
+.oveflow_hidden{
+  overflow: hidden;
+}
 /* =========================================
    Components
 ========================================= */
@@ -278,6 +282,7 @@ section {
 /* ========== To top button with scroll indicator bar ========== */
 
 /* ========== Buttons ========== */
+
 
 /* =========================================
    Header
@@ -531,6 +536,7 @@ nav {
 .skills_item_icon {
   font-size: 22px;
 }
+
 /* =========================================
    Services
 ========================================= */
