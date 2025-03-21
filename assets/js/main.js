@@ -42,7 +42,6 @@ const portfolioHTML = portfolioProjects.map(project =>
 ).join("")
 document.querySelector(".portfolio_projects_grid").innerHTML = portfolioHTML
 elements.portfolioModal.triggerCards = document.querySelectorAll(".portfolio_project")
-console.log(elements.portfolioModal.triggerCards);
 
 // Generate portfolio modal as per the project
 // Filter portfolio cards according to portfolio tabs.
@@ -50,33 +49,33 @@ console.log(elements.portfolioModal.triggerCards);
    Modals open/close function
 ===================================================== */
 
-function addEvent(element, event, callback){
-element.addEventListener(event, callback)
-}
+// function addEvent(element, event, callback){
+// element.addEventListener(event, callback)
+// }
 
-function toggleModal (modal, overlay, modalCloseIcon, triggerCards) {
-   let triggers = [overlay, modalCloseIcon, ...triggerCards ]
-   triggers.forEach((trigger) => {
-     addEvent(trigger, 'click', () => {
-       document.body.classList.toggle("oveflow_hidden")
-       modal.classList.toggle('invisible')
-       overlay.classList.toggle('invisible')
-     })
-   })
+// function toggleModal (modal, overlay, modalCloseIcon, triggerCards) {
+//    let triggers = [overlay, modalCloseIcon, ...triggerCards ]
+//    triggers.forEach((trigger) => {
+//      addEvent(trigger, 'click', () => {
+//        document.body.classList.toggle("oveflow_hidden")
+//        modal.classList.toggle('invisible')
+//        overlay.classList.toggle('invisible')
+//      })
+//    })
 
-}
-toggleModal(
-   elements.serviceModal.modal,
-   elements.serviceModal.overlay,
-   elements.serviceModal.closeIcon,
-   Array.from(elements.serviceModal.triggerCards),
- )
- toggleModal(
-   elements.portfolioModal.modal,
-   elements.portfolioModal.overlay,
-   elements.portfolioModal.closeIcon,
-   Array.from(elements.portfolioModal.triggerCards),
- )
+// }
+// toggleModal(
+//    elements.serviceModal.modal,
+//    elements.serviceModal.overlay,
+//    elements.serviceModal.closeIcon,
+//    Array.from(elements.serviceModal.triggerCards),
+//  )
+//  toggleModal(
+//    elements.portfolioModal.modal,
+//    elements.portfolioModal.overlay,
+//    elements.portfolioModal.closeIcon,
+//    Array.from(elements.portfolioModal.triggerCards),
+//  )
 
 /* =====================================================
    Testimonial Swiper
