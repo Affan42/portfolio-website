@@ -450,15 +450,21 @@ nav {
 ========================================= */
 .about_content {
   display: flex;
+  gap: 70px;
   align-items: center;
+  background-color: green;
+}
+.aboutbanner_wrapper{
+  background-color: red;
 }
 .about_banner {
   width: 300px;
   border-radius: 20px;
+  
 }
-.about_content {
-  display: flex;
-  gap: 70px;
+
+.about_details{
+  flex: 1;
 }
 .about_role_txt {
   font-weight: var(--font-semi-bold);
@@ -484,6 +490,7 @@ nav {
   gap: 15px;
   padding: 30px;
   border-radius: 6px;
+  background-color: red;
 }
 .about_stat_number {
   font-size: var(--h2-font-size);
@@ -866,10 +873,18 @@ footer .container{
    Media Queries (max-width: 1600px)
 ========================================= */
 @media (max-width: 1600px) {
+
+
+}
+
+/* =========================================
+   Media Queries (max-width: 1200px)
+========================================= */
+@media (max-width: 1200px) {
   .home .middle_sec{
     flex-direction: column;
   }
-  .home .description{
+  .home .descriptgion{
     order: -1;
     display: flex;
     flex-direction: column;
@@ -884,11 +899,6 @@ footer .container{
     font-size: var(--h3-font-size);
   }
 }
-
-/* =========================================
-   Media Queries (max-width: 1200px)
-========================================= */
-
 /* =========================================
    Media Queries (max-width: 992px)
 ========================================= */

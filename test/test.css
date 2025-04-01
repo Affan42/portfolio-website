@@ -1,8 +1,8 @@
-html{
-    /* height: 200px; */
-    overflow: hidden;
-}
-body{
+/* html{ */
+/* height: 200px; */
+/* overflow: hidden;
+} */
+/* body{
     margin: 0;
     height: 300px;
     overflow: hidden;
@@ -10,13 +10,15 @@ body{
 }
 p{
     margin: 0;
-}
-section{
+} */
+/* --------Modal--------- */
+
+/* section{
     height: 1000px;
     width: 100vw;
     position: relative;
-}
-.container{
+} */
+/* .container{
     position: absolute;
     border: 10px solid red;
     inset: 0;
@@ -31,7 +33,9 @@ section{
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
+
+/* --------Card--------- */
 /* .card{
     height: 100px;
     width: 500px;
@@ -56,3 +60,22 @@ section{
     font-size: 30px;
     color: green;
 } */
+section {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  background-color: green;
+  width: 968px;
+  display: flex; 
+  height: 400px;
+  column-gap: 9rem;
+}
+.first_child{
+  background-color: red;
+  width: 300px;
+}
+.second_child{
+  background-color: yellow;
+  flex: 1;
+}
