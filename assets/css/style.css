@@ -352,10 +352,8 @@ nav {
 /* =========================================
    Home
 ========================================= */
-.home .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.home{
+  position: relative;
 }
 
 .rotated_text {
@@ -369,13 +367,17 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 20%;
 }
 /* Left Section */
 
 .home .left_sec {
-  gap: 20px;
+left: 10%;
 }
-
+.home .right_sec {
+  right: 10%;
+  }
 .left_line {
   width: 1px;
   height: 80px;
@@ -452,11 +454,8 @@ nav {
   display: flex;
   gap: 70px;
   align-items: center;
-  background-color: green;
 }
-.aboutbanner_wrapper{
-  background-color: red;
-}
+
 .about_banner {
   width: 300px;
   border-radius: 20px;
@@ -490,7 +489,6 @@ nav {
   gap: 15px;
   padding: 30px;
   border-radius: 6px;
-  background-color: red;
 }
 .about_stat_number {
   font-size: var(--h2-font-size);
@@ -873,40 +871,74 @@ footer .container{
    Media Queries (max-width: 1600px)
 ========================================= */
 @media (max-width: 1600px) {
-
-
+.about_stats_wrap{
+  grid-template-columns: 1fr 1fr;
+}
+.about_banner{
+  width: 400px;
+}
 }
 
 /* =========================================
    Media Queries (max-width: 1200px)
 ========================================= */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
+ 
+} */
+/* =========================================
+   Media Queries (max-width: 992px)
+========================================= */
+@media (max-width: 992px) {
+  section .container{
+    max-width: 350px;
+  }
+  .about_banner{
+    width: 350px;
+  }
   .home .middle_sec{
     flex-direction: column;
   }
-  .home .descriptgion{
+  .home .description{
     order: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .home .description .texts_div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   text-align: center;
   }
   header .brand{
     font-size: var(--h3-font-size);
   }
-}
-/* =========================================
-   Media Queries (max-width: 992px)
-========================================= */
+  .about_content{
+    flex-direction: column;
+    row-gap: 40px;
 
+  }
+  
+  .about_stats_box{
+    flex-direction: column;
+    text-align: center;
+  }
+  .about_description{
+    margin-bottom: 50px;
+  }
+  .about_stats_wrap{
+    margin-bottom:50px ;
+  }
+  .portfolio_projects_grid{
+    grid-template-columns:1fr ;
+  }
+  .testimonials_wrap{
+    flex-direction: column;
+  }
+}
 /* =========================================
    Media Queries (max-width: 768px)
 ========================================= */
-
+@media (max-width: 768px) {
+  
+}
 /* =========================================
    Media Queries (max-width: 480px)
 ========================================= */
