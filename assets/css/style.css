@@ -873,7 +873,7 @@ footer .container {
 @media (max-width: 992px) {
   section .container {
     max-width: 100%;
-    background-color: red;
+    background-color: darkred;
   }
   .home .container{
     justify-content: center;
@@ -894,6 +894,7 @@ footer .container {
   }
   .home .middle_sec {
     flex-direction: column;
+    width: 350px;
   }
   .home .description {
     order: -1;
@@ -903,6 +904,9 @@ footer .container {
   }
   .home .description .texts_div {
     text-align: center;
+  }
+  .hero_banner{
+    width: 350px;
   }
   header .brand {
     font-size: var(--h3-font-size);
@@ -925,17 +929,32 @@ footer .container {
   .about_description {
     margin-bottom: 50px;
   }
+
   .about_stats_wrap {
     margin-bottom: 50px;
   }
   .portfolio_projects_grid {
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
   }
-  .portfolio_project{
-    width: 300px;
+  .swiper{
+    width: 350px;
   }
   .testimonials_wrap {
     flex-direction: column;
+  }
+  .testimonials_right_section{
+    text-align: center;
+  }
+  .swiper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  .swiper-pagination{
+    position: initial;
   }
 }
 /* =========================================
